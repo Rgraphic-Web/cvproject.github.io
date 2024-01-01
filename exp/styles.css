@@ -1,47 +1,61 @@
 @media only screen and (min-width:30vh){
+    @keyframes G1A {
+        0%{opacity: 0%;}
+        30%{opacity: 1%;}
+        100%{opacity: 100%;}
+    }
     body {
-        background-color: #f0f0f0;
-        background-image:url(Pimage.jpeg);
-        backdrop-filter: blur(5px);
+        background-color: #bcf7fc;
+        height: 100vh;
+        margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        margin: 0;
+        flex-direction: column;
+        background-image: url(Bimage.jpg);
+        background-repeat:repeat-y;
+        background-size: cover;
+        transition: all 2s;
+        animation: G1A 2s ;
     }
-    
     .cv {
         width: 100%;
-        height: 100%;
-        overflow: hidden;
+        height: 75dvh;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    
     .squar {
+        transition-duration: 2s;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 80%;
-        height: 80%;
-        background-color: rgba(109, 197, 255, 0.8);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
+        height: fit-content;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.966);
+        border-radius: 20px;
+        border: 1px dashed #ffffff3a;
+        background-color:rgb(207, 207, 207);
         padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: rgb(0, 0, 0);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: small;
+        text-align: justify;
+        overflow: hidden;
     }
-    
     .circle {
-        width: 70%;
+        width: 50%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        margin: 5%;
+        margin: 2% ;
+        border-radius: 100%;
     }
     
     .circle img {
@@ -51,47 +65,175 @@
     }
     
     .info {
-        width: 30%;
+        width: 80%;
         height: 100%;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        flex-direction: column;
+        margin: 2%;
+    }
+ 
+    .cv2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: fit-content;
+        position: relative;
+        margin: 2vh ;
+        padding:2vh;
+    }
+    .container {
+        border-radius: 2vw;
+        padding: 20px;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+        width: 80%;
+        height: fit-content;
+        backdrop-filter: blue(10px);
+        color: rgb(0, 0, 0);
+        margin: auto;
+        position: relative;
+        font-size: small;
+        overflow: hidden;
+    }
+    .table {
+        display: none;
+        border-collapse: collapse;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .table th, .table td {
+        border: none;
+        padding: 10px;
+        text-align: left;
+    }
+        
+    /* Style the dropdown button and content */
+}
+
+/*Animation*/
+
+/*.squar{
+    border: none;
+    color: #ffffff;
+  }
+.squar:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 1s ease;
+  }
+.squar:hover {
+    color: #000;
+  }
+.squar:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+.squar:active {
+    top: 2px;
+  }*/
+.squar , .container {
+    border: none;
+    background: rgb(251,33,117);
+      background: linear-gradient(0deg, rgb(78, 49, 126) 0%, rgb(107, 99, 139)100%);
+      color: #fff;
+      overflow: hidden;
+  }
+.squar:hover , .container:hover {
+      text-decoration: none;
+      color: #fff;
+  }
+.squar:before , .container::before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      top: -180px;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      background-color: #fff;
+      animation: shiny-btn1 5s ease-in-out infinite;
+  }
+.squar:hover , .container:hover{
+    color: black;
+  }
+.squar:active , .container:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+  }
+  
+  
+@-webkit-keyframes shiny-btn1 {
+      0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+      80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+      81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+      100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+  } 
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+        transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+}
+
+@media only screen and (min-width:80vh){   
+   body {
+        background-color: #d3fdff;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 5%;
-    }
-}
-    
-@media only screen and (min-width:80vh){   
-   body {
-        background-color: #f0f0f0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        height: 100%;
+        width: 100vw;
         margin: 0;
     }
     
     .cv {
         width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
+        height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
-    
+
     .squar {
         transition-duration: 1s;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 80%;
-        background-color: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
+        height:fit-content;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.575);
         padding: 20px;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
+        z-index: 1;
+        font-size:small;
     }
     
     .circle {
@@ -103,6 +245,7 @@
         align-items: center;
         overflow: hidden;
         position: relative;
+        animation: float 6s infinite;
     }
     
     .circle img {
@@ -112,11 +255,50 @@
     }
     
     .info {
-        width: 100%;
+        width: 65%;
         height: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        font-size: 2vh;
     }
+    h2{
+        align-self: flex-start;
+    }
+    .cv2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 50%;
+    }
+    .container {
+        position: relative;
+        padding: 20px;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+        width: 80%;
+        height: fit-content;
+        background-color: #000000a4;
+    }
+
+    .table {
+        display: none;
+        border-collapse: collapse;
+        width: 100%;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+    }
+
+    .table th, .table td {
+        border: none;
+        padding: 10px;
+        text-align: left;
+    }
+}
+button{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border: none;
 }
