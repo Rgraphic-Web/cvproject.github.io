@@ -1,4 +1,4 @@
-@media only screen and (min-width:30vh){
+@media only screen and (min-width:55dvw){
     @keyframes G1A {
         0%{opacity: 0%;}
         30%{opacity: 1%;}
@@ -10,30 +10,32 @@
         margin: 0;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items:center;
         flex-direction: column;
         background-image: url(Bimage.jpg);
         background-repeat:repeat-y;
         background-size: cover;
         transition: all 2s;
         animation: G1A 2s ;
+        font-size: 14px;
     }
     .cv {
         width: 100%;
-        height: 75dvh;
+        height: 50vh;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 50px;
+
     }
     .squar {
         transition-duration: 2s;
-        position: absolute;
+        position:relative;
         width: 80%;
-        height: fit-content;
+        height:fit-content;
         backdrop-filter: blur(10px);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.966);
-        border-radius: 20px;
         border: 1px dashed #ffffff3a;
         background-color:rgb(207, 207, 207);
         padding: 20px;
@@ -43,9 +45,9 @@
         align-items: center;
         color: rgb(0, 0, 0);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: small;
+        font-size: 16px;
         text-align: justify;
-        overflow: hidden;
+        overflow: visible;
     }
     .circle {
         width: 50%;
@@ -56,6 +58,8 @@
         position: relative;
         margin: 2% ;
         border-radius: 100%;
+        animation: float 4s infinite;
+        position: relative;
     }
     
     .circle img {
@@ -73,28 +77,30 @@
         flex-direction: column;
         margin: 2%;
     }
- 
+ h2{
+    align-self: flex-start;
+ }
     .cv2{
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
-        height: fit-content;
+        height: 100vh;
         position: relative;
-        margin: 2vh ;
-        padding:2vh;
+        margin: 2dvw ;
+        padding:2dvw;
     }
     .container {
-        border-radius: 2vw;
         padding: 20px;
         box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
         width: 80%;
         height: fit-content;
         backdrop-filter: blue(10px);
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         margin: auto;
         position: relative;
-        font-size: small;
+        font-size:1em ;
         overflow: hidden;
     }
     .table {
@@ -109,6 +115,23 @@
         padding: 10px;
         text-align: left;
     }
+    button{
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        border: none;
+        color: white;
+    }
+    
+    #longText {
+        max-height: 200px; /* Set a maximum height for the paragraph */
+        overflow: hidden;
+      }
+      
+      #longText.expanded {
+        max-height: none; /* Remove the maximum height when expanded */
+      }
+      
         
     /* Style the dropdown button and content */
 }
@@ -153,10 +176,6 @@
       color: #fff;
       overflow: hidden;
   }
-.squar:hover , .container:hover {
-      text-decoration: none;
-      color: #fff;
-  }
 .squar:before , .container::before {
       position: absolute;
       content: '';
@@ -169,7 +188,7 @@
       animation: shiny-btn1 5s ease-in-out infinite;
   }
 .squar:hover , .container:hover{
-    color: black;
+    color: rgb(0, 217, 255);
   }
 .squar:active , .container:active{
     box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
@@ -201,7 +220,7 @@
     }
 }
 
-@media only screen and (min-width:80vh){   
+@media only screen and (min-width:90dvh){   
    body {
         background-color: #d3fdff;
         display: flex;
@@ -211,11 +230,13 @@
         height: 100%;
         width: 100vw;
         margin: 0;
+        font-size: 16px;
     }
     
     .cv {
+        position: relative;
         width: 100%;
-        height: 100dvh;
+        height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -224,7 +245,7 @@
 
     .squar {
         transition-duration: 1s;
-        position: absolute;
+        position:relative;
         height:fit-content;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.575);
         padding: 20px;
@@ -233,7 +254,7 @@
         align-items: center;
         flex-direction: row;
         z-index: 1;
-        font-size:small;
+        font-size:16px;
     }
     
     .circle {
@@ -270,7 +291,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        width: fit-content;
         height: 50%;
     }
     .container {
@@ -287,7 +308,7 @@
         border-collapse: collapse;
         width: 100%;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: medium;
+        font-size: 16px;
     }
 
     .table th, .table td {
@@ -295,10 +316,25 @@
         padding: 10px;
         text-align: left;
     }
+ 
+    .cv button{
+        display: none;
+        flex-direction: row;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #longText {
+        max-height: 100%; /* Set a maximum height for the paragraph */
+        overflow: hidden;
+      }
+      
+      #longText.expanded {
+        max-height: none; /* Remove the maximum height when expanded */
+      }
+
 }
-button{
-    display: flex;
-    flex-direction: row;
-    background-color: transparent;
-    border: none;
+
+img{
+    padding: 0 20px 0 20px;
 }
