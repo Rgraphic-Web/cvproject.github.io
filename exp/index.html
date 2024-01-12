@@ -4,23 +4,19 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="styles2.css">
 </head>
-<body>
+<body>  
     <div class="circle2"></div>
     <div class="cv">
-        <div class="squar">
+        <div class="squar" id="squar1">
             <div class="circle">
-                <img src="Pimage.jpeg" alt="Your Photo">
+                <img src="Pimage.jpg" alt="Your Photo">
             </div>
             <div class="info" id="longText">
                 <h2>Ravindu Samarakoon</h2>
                 <p id="#longText">I am a dedicated and creative Graphic Designer with a proven track record of success in both the design industry and entrepreneurship. With over 4 years of professional experience in graphic design, I have honed my skills in creating visually compelling and effective visual communication solutions.
-
                     Currently, I am successfully managing my own business, where I serve as a Graphic Designer and contribute to the overall success and growth of the enterprise. Over the course of the past year, I have demonstrated strong leadership and organizational abilities, playing a pivotal role in the business's development.
-                    
                     In addition to my graphic design expertise, I have a passion for photography, which I seamlessly integrate into my design projects. This dual skill set allows me to bring a unique perspective to my work, ensuring that each project is not only visually appealing but also tells a compelling story.
-                    
                     Recognizing the importance of staying current in the ever-evolving digital landscape, I am actively learning web design to broaden my skill set. This continuous pursuit of knowledge reflects my commitment to staying at the forefront of industry trends and delivering cutting-edge design solutions.
-                    
                     My approach to design is not only rooted in creativity but also in a strategic understanding of client objectives. I thrive in dynamic environments, adapting to challenges with a positive and solutions-oriented mindset. As I continue to grow both as a designer and entrepreneur, I am excited about the opportunities to contribute my skills and passion to new and exciting projects.
                     </p>
             </div>
@@ -30,7 +26,7 @@
     </div>
     </div>
     <div class="cv2">
-        <div class="container">
+        <div class="container" id="container1">
             <button onclick="toggleDiv()"> <img src="Picon.png" alt="" width="50px"><h2>Personal Information</h2></button>
             <table id="myDiv" class="table">
                 <tr>
@@ -70,10 +66,85 @@
                     <td>Male</td>
                 </tr>
             </table>
-        </div>    
-
+        </div> 
+        <div class="container" id="container2">
+            <button onclick="toggleDiv2()"> <img src="Picon.png" alt="" width="50px"><h2>Education</h2></button>
+            <div id="myDivsub2" class="EduDescription">
+                <h3>School Attendent - A. Rathnayake Central Collage</h3>
+                <h4>Ordinary Level Examination - Index No. ########</h4>
+                <p>
+                    In 2018, I excelled in all nine Ordinary Level subjects, 
+                showcasing versatility. Outstanding results in Technology, Buddhism,
+                Mathematics, English, and Science reflect a comprehensive 
+                understanding. This success underscores adaptability, speaking to my commitment to excellence and 
+                laying a strong foundation for future pursuits..</p>
+            </div>
+            
+            <table id="myDiv2" class="table2">
+                <tr>
+                    <th>Technology</th>
+                    <td>A Pass</td>
+                </tr>
+                <tr>
+                    <th>Buddhism</th>
+                    <td>A Pass</td>
+                </tr>
+                <tr>
+                    <th>History</th>
+                    <td>B Pass</td>
+                </tr>
+                <tr>
+                    <th>Sinhala</th>
+                    <td>B Pass</td>
+                </tr>
+                <tr>
+                    <th>Mathematics</th>
+                    <td>B Pass</td>
+                </tr>
+                <tr>
+                    <th>Science</th>
+                    <td>C Pass</td>
+                </tr>
+                <tr>
+                    <th>English</th>
+                    <td>C Pass</td>
+                </tr>
+                <tr>
+                    <th>Drama</th>
+                    <td>C Pass</td>
+                </tr>
+                <tr>
+                    <th>Commerce</th>
+                    <td>C Pass</td>
+                </tr>
+            </table>
+            <div id="myDivsub3" class="EduDescription">
+                <h4>Advanced Level Examination - Index No. ######## - Technology Subject</h4>
+                <p>
+                    In 2018, I excelled in all nine Ordinary Level subjects, 
+                showcasing versatility. Outstanding results in Technology, Buddhism,
+                Mathematics, English, and Science reflect a comprehensive 
+                understanding. This success underscores adaptability, speaking to my commitment to excellence and 
+                laying a strong foundation for future pursuits..</p>
+            </div>
+        </div>       
     </div>
-   <div>
+   <div class="cv3c">
+    <div class="center-container">
+        <button class="Abtn" onclick="toggleCards()" class="toggleBtn">Contacts Link to Social Medias</button>
+    </div>
+    <div class="cv3">
+        <div class="card whatsapp">
+            <h2>Whatsapp</h2>
+        </div>
+        <div class="card email">
+            <h2>Email</h2>
+        </div>
+        <div class="card facebook">
+            <h2>Facebook</h2>
+        </div>
+    </div>
+   </div>
     
     <script src="script.js"></script>
 </body>
