@@ -17,7 +17,40 @@
   100%{background-color:#ffffff ;
   color: black;}
 }
+@keyframes CvProAnimation {
+  0% {
+    background-image: url(Portfolio\ copy.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  50%{
+    background-position: bottom;
+  }
+  100%{
+    background-image: url(Portfolio\ copy.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@keyframes colorc3 {
+  0%{background-color:#ffffff ;
+  color: black;}
+  35%{background-color:#ffffff ;
+    color: black;}
+  36%{background-color:#0f0f1b ;
+  color: rgb(255, 255, 255);}
+  99%{background-color:#0f0f1b ;
+    color: rgb(255, 255, 255);}
+  100%{background-color:#ffffff ;
+      color: black;}
+}
 @media only screen and (min-width:45dvw){
+  *{
+    margin: 0;
+    padding: 0;
+  }
     @keyframes G1A {
         0%{opacity: 0%;}
         30%{opacity: 1%;
@@ -28,7 +61,7 @@
         background-color: #000000;
         height: 100%;
         margin: 0 auto;
-        width: 100vw;
+        width: 100dvw;
         display: flex;
         justify-content: center;
         align-items:center;
@@ -36,7 +69,7 @@
         background-image: url(Bimage3.jpg);
         background-repeat:repeat;
         animation: G1A 1s ;
-        font-size: 20px;
+        font-size: 14px;
         transition: all 1s ease-in-out;
     }
     .cv {
@@ -50,7 +83,7 @@
     .squar {
         transition-duration: 2s;
         position:relative;
-        width:100%;
+        width:100vw;
         height:fit-content;
         background-image: linear-gradient(to right,rgba(0, 0, 0, 0),rgb(0, 0, 0)50%);
         background-color:rgba(0, 0, 0, 0);
@@ -61,7 +94,7 @@
         align-items: center;
         color: rgb(255, 255, 255);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 1.8em;
+        font-size: 1.2em;
         text-align: justify;
         overflow: hidden;
     }
@@ -80,13 +113,13 @@
     
     .circle img {
         width: 100%;
-        height: auto;
+        height:50%;
         border-radius: 50%;
     }
     
     .info {
-        width: 90%;
-        height: 100%;
+        width: 90vw;
+        height: 50%;
         display: flex;
         justify-content:flex-start;
         align-items: center;
@@ -95,14 +128,17 @@
     }
  h2{
     align-self: flex-start;
-    font-size: 1.8em;
+    font-size: 1.2em;
  }
  h3, h4{
-  font-size: 0.5em;
+  font-size: 1em;
  }
  #container2 p{
   font-size: 0.8em;
   padding: 10px;
+ }
+ .box{
+  font-size: 0.8em;
  }
     .cv2{
         transition: all 1s;
@@ -123,7 +159,7 @@
         height: fit-content;
         backdrop-filter: blue(10px);
         color: rgb(255, 255, 255);
-        font-size: 1.8em;
+        font-size: 1.2em;
         position: relative;
         overflow: hidden;
         background-color: #000000;
@@ -143,6 +179,7 @@
     }
     #container1 button , #container2 button{
         display: flex;
+        margin: 10px;
         flex-direction: row;
         background-color: transparent;
         align-items: center;
@@ -151,7 +188,7 @@
         overflow: hidden;
         width: 100%;
         height: 100%;
-        font-size: 0.7em;
+        font-size: 1.2em;
     }
     #container1 button:hover, #container2 button:hover{
         display: flex;
@@ -163,7 +200,7 @@
     }
     
     #longText {
-        max-height: 700px; /* Set a maximum height for the paragraph */
+        max-height: 300px; /* Set a maximum height for the paragraph */
         overflow: hidden;
       }
       
@@ -185,7 +222,7 @@
         border: none;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     
     .toggleBtn:hover {
@@ -234,21 +271,20 @@
         justify-content: center;
 margin: 10px; /* Show the cards when .show is added to .cv3 */
     }
-
     .Vector{
       display:none;
       justify-content:flex-start;
       align-items: center;
       flex-direction: column;
       width: 100vw;
-      height: 1280px;
+      height:fit-content;
       background-color: rgb(0, 0, 0);
-      background-image: url(Vector3.png);
       background-size:center;
       overflow: hidden;
       animation:colorc2 18s infinite;
     }
     .Images{
+      position: relative;
       width: 100vw;
       height: 720px;
       background-color: #f1c2af;
@@ -258,7 +294,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     }
     .Images div{
       width:100vw;
-      height: 720px;
+      max-height: 720px;
       overflow: hidden;
       transition: all 0.5s ease-out;
       position: absolute;
@@ -269,7 +305,8 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
       margin: 0;
       padding: 0;
       z-index: 2;
-      background-image: url(Vector1.png);
+      background-image: url(Vector1.1.png);
+      background-position: center;
       overflow: hidden;
     }
 
@@ -278,17 +315,56 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
       margin: 0;
       padding: 0;
     z-index: 1;
-    background-image:url(Vector2.png);
-    background-position: contain;
+    background-image:url(Vector2.1.png);
+    background-position: center;
     overflow: hidden;
   }
   .Discription{
-    padding-top:20px ;
+    padding:50px ;
     width: 90%;
     height: 280px;
     font-size: 1.5em;
     z-index: 3;
+    text-align: justify;
   }
+  .CvPro{
+    display:none;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    background-size:center;
+    overflow: hidden;
+    animation:colorc2 18s infinite;
+  }
+  .Images2{
+    position: relative;
+    width: 100vw;
+    height: 720px;
+    background-color: #f1c2af;
+    background-size: contain;
+    overflow: hidden;
+    animation:colorc 18s infinite;
+    animation: CvProAnimation 20s infinite ease-in;
+  }
+  .Images2 div{
+    width:100vw;
+    max-height: 720px;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+    position: absolute;
+  }
+
+.Discription2{
+  padding-top:50px ;
+  width: 90%;
+  height: 280px;
+  font-size: 1.5em;
+  z-index: 3;
+  text-align: justify;
+}
 }
         
     /* Style the dropdown button and content */
@@ -540,7 +616,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
         height: 100%;
         width: 100vw;
         margin: 0 auto;
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .cv {
@@ -605,7 +681,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
         width:100vw;
         height:fit-content;
         flex-direction: row;
-        font-size: 0.8em;
+        font-size: 1.3em;
     }
     .container {
         position: relative;
@@ -732,7 +808,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
       height: 70vh;
       max-height: 720px;
       background-color: rgb(0, 0, 0);
-      background-image: url(Vector3.png);
+    
       background-size:center;
       overflow: hidden;
       animation:colorc2 18s infinite;
@@ -759,6 +835,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
       padding: 0;
       z-index: 2;
       background-image: url(Vector1.png);
+      background-position: inherit;
       overflow: hidden;
     }
 
@@ -778,6 +855,48 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     padding-right:80px ;
     font-size: 1.2em;
   }
+
+  .CvPro{
+    display:none;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    width: 100%;
+    max-width: 1900px;
+    height: 70vh;
+    max-height: 720px;
+    background-color: rgb(0, 0, 0);
+    background-size:center;
+    overflow: hidden;
+    animation:colorc3 60s infinite;
+
+  }
+  .CvPro .Images2{
+    width: 70%;
+    height: 100%;
+    background-color: #f1c2af;
+    background-size: contain;
+    clip-path:polygon(16vw 0%, 100% 0%, 100% 100%, 0% 100%) ;
+    overflow: hidden;
+    animation:colorc 18s infinite;
+    animation:CvProAnimation 60s infinite;
+  }
+  .Images div{
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+  }
+
+.Discription2{
+  width: 30%;
+  margin: 0%;
+  padding-top:80px;
+  padding-left:80px ;
+  font-size: 1.2em;
+  text-align: right;
+}
 }
 
 img{
@@ -838,7 +957,8 @@ img{
 
 .box {
   display: flex;
-  width: 500px;
+  max-width: 500px;
+  min-width: 250px;
   height: 100px;
   margin: 10px;
   cursor: pointer;
