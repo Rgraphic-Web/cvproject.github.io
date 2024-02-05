@@ -3,6 +3,12 @@
   padding: 0;
   font-family: 'Quicksand', sans-serif;
 }
+*::selection{
+  background-color: #ff0d009c;
+}
+html{
+  scroll-behavior: smooth;
+}
 
 @keyframes colorc {
   0%{background-color:#000000 ;}
@@ -33,6 +39,103 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+@keyframes LogoAnimation {
+  0% {
+    background-image: url(L1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  10%{
+    background-image: url(L2.jpg);
+  }
+  20%{
+    background-image: url(L3.jpg);
+  }
+  30%{
+    background-image: url(L4.jpg);
+  }
+  40%{
+    background-image: url(L5.jpg);
+  }
+  50%{
+    background-image: url(L6.jpg);
+  }
+  60%{
+    background-image: url(L7.jpg);
+  }
+  70%{
+    background-image: url(L8.jpg);
+  }
+  80%{
+    background-image: url(L9.jpg);
+  }
+  90%{
+    background-image: url(L10.jpg);
+  }
+  100%{
+    background-image: url(L11.jpg);
+  }
+}
+@keyframes PosterAnimation {
+  0% {
+    background-image: url(P1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  10%{
+    background-image: url(P1.jpg);
+    background-position: top;
+    background-size: cover;
+  }
+  20%{
+    background-image: url(P2.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  30%{
+    background-image: url(P2.jpg);
+    background-position: top;
+    background-size: cover;
+  }
+  40%{
+    background-image: url(P3.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  50%{
+    background-image: url(P3.jpg);
+    background-position: top;
+    background-size: cover;
+  }
+  60%{
+    background-image: url(P4.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  70%{
+    background-image: url(P4.jpg);
+    background-position: top;
+    background-size: cover;
+  }
+  80%{
+    background-image: url(P5.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  90%{
+    background-image: url(P6.jpg);
+    background-position: top;
+    background-size: cover;
+  }
+  100%{
+    background-image: url(P7.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
 }
 @keyframes colorc3 {
   0%{background-color:#ffffff ;
@@ -99,22 +202,20 @@
         overflow: hidden;
     }
     .circle {
-        width: 50%;
-        height: 100%;
+        width: 100%;
+        height: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        margin: 2% ;
-        border-radius: 100%;
-        animation: float 3s infinite;
+        animation: float 60s infinite;
         position: relative;
     }
     
     .circle img {
         width: 100%;
-        height:50%;
-        border-radius: 50%;
+        height:80%;
+        
     }
     
     .info {
@@ -126,16 +227,23 @@
         flex-direction: column;
         margin-top: 2%;
     }
+    .squar button{
+      text-decoration: none;
+      background:transparent;
+      border: none;
+      font-weight: 600;
+      color:red;
+    }
  h2{
     align-self: flex-start;
     font-size: 1.2em;
  }
  h3, h4{
   font-size: 1em;
+  margin: 10px;
  }
  #container2 p{
   font-size: 0.8em;
-  padding: 10px;
  }
  .box{
   font-size: 0.8em;
@@ -229,6 +337,24 @@
         background-color: #ffffff;
         color: black;
     }
+    .EduDescription p, .EduDescription{
+      margin: 10px;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
+    .EduDescription p{
+      width: 90%;
+    }
+    .EduDescription h4{
+      width: 90%;
+      margin-left: 14px;
+    }
+    .table2{
+      margin: 20px;
+    }
+
     
     .cv3 {
         display: flex;
@@ -322,7 +448,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
   .Discription{
     padding:50px ;
     width: 90%;
-    height: 280px;
+    height: 480px;
     font-size: 1.5em;
     z-index: 3;
     text-align: justify;
@@ -337,9 +463,9 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     background-color: rgb(0, 0, 0);
     background-size:center;
     overflow: hidden;
-    animation:colorc2 18s infinite;
+    animation:colorc2 100s infinite;
   }
-  .Images2{
+  .CvPro .Images2{
     position: relative;
     width: 100vw;
     height: 720px;
@@ -360,10 +486,114 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
 .Discription2{
   padding-top:50px ;
   width: 90%;
-  height: 280px;
+  height: 380px;
   font-size: 1.5em;
   z-index: 3;
   text-align: justify;
+}
+.LogoDesign{
+  display:none;
+  justify-content:flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: fit-content;
+  background-color: rgb(0, 0, 0);
+  background-size:center;
+  overflow: hidden;
+}
+.LogoDesign .Images2{
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  background-color: #f1c2af;
+  overflow: hidden;
+  animation:colorc 18s infinite;
+  animation: LogoAnimation 60s infinite ease-in;
+}
+.Images2 div{
+  width:100vw;
+  max-height: 720px;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+  position: absolute;
+}
+
+.Discription3{
+  color: white;
+padding-top:50px ;
+width: 90%;
+height: 380px;
+font-size: 1.5em;
+z-index: 3;
+text-align: justify;
+}
+.PosterDesign{
+  display:none;
+  justify-content:flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: fit-content;
+  background-color: rgb(0, 0, 0);
+  background-size:center;
+  overflow: hidden;
+}
+.PosterDesign .Images2{
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  background-color: #f1c2af;
+  overflow: hidden;
+  animation:colorc 18s infinite;
+  animation: PosterAnimation 60s infinite ease-in;
+}
+.Images2 div{
+  width:100vw;
+  max-height: 720px;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+  position: absolute;
+}
+
+.Discription4{
+  color: white;
+padding-top:50px ;
+width: 90%;
+height: 380px;
+font-size: 1.5em;
+z-index: 3;
+text-align: justify;
+}
+.box1{
+  animation-delay: 0.3s;
+}
+.box2{
+  animation-delay: 0.6s;
+}
+.box3{
+  animation-delay: 0.9s;
+}
+.box4{
+  animation-delay: 1.2s;
+}
+.box5{
+  animation-delay: 1.5s;
+}
+.box6{
+  animation-delay: 1.8s;
+}
+@keyframes float {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
 }
 }
         
@@ -448,7 +678,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     width: 100%;
   }
   
-  .container span:hover {
+  /*.container span:hover {
     color: rgb(251, 2, 2);
   }
   
@@ -484,7 +714,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     display: block;
     width: 100%;
     height: 100%;
-  }
+  }*/
   .squar:before,
   .squar:after {
     position: absolute;
@@ -513,7 +743,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
   .squar:hover:after {
     width: 100%;
   }
-  .squar span:hover{
+  /*.squar span:hover{
      color: rgb(251, 2, 2);
   }
   .squar span:before,
@@ -538,7 +768,8 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
   .squar span:hover:after {
     width: 100%;
   }
-/*Shiny*/
+
+Shiny*/
 .container:before {
     position: absolute;
     content: '';
@@ -586,25 +817,12 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
       100% { -webkit-transform: scale(100) rotate(45deg); opacity: 0; }
   } 
 
-@keyframes float {
-    0% {
-        box-shadow: 0 5px 15px 0px rgba(100, 100, 100, 0.6);
-        transform: translateY(0px);
-    }
-    50% {
-        box-shadow: 0 25px 15px 0px rgba(100, 100, 100, 0.2);
-        transform: translateY(-20px);
-    }
-    100% {
-        box-shadow: 0 5px 15px 0px rgba(100, 100, 100, 0.6);
-        transform: translateY(0px);
-    }
-}
+
 
 
 @media only screen and (min-width:90dvh){   
    @keyframes clor {
-    50%{background-image: linear-gradient(to left,(0, 0, 0, 0)),rgb(0, 0, 0);}
+    50%{background-image: linear-gradient(to left,rgba(0, 0, 0, 0)),rgb(0, 0, 0);}
     
    }
   body {
@@ -622,10 +840,10 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     .cv {
         position: relative;
         width: 100vw;
-        height: 50vh;
+        height:fit-content;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         
     }
 
@@ -634,7 +852,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
         position:relative;
         width: 100%;
         height:fit-content;
-        padding: 20px;
+        padding: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -645,26 +863,27 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     }
     
     .circle {
+      margin: auto auto;
         transition-duration: 1s;
-        width: 50%;
-        height: 50%;
-        max-width: 400px;
+        width: 100%;
+        max-width:600px ;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
         position: relative;
-        animation: float 6s infinite;
+        animation: none;
     }
     
     .circle img {
         width: 100%;
-        height: auto;
-        border-radius: 50%;
+        height: 100%;
+        border-radius:none;
     }
     
     .info {
-        width: 65%;
+      margin: auto auto;
+        width: 50%;
         height: 50%;
         display: flex;
         justify-content: center;
@@ -697,7 +916,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
         border-collapse: collapse;
         width: 100%;
         font-family:'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     .table th, .table td {
@@ -751,6 +970,8 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
         margin-top: 10px; /* Add space between the button and cards */
         max-height: fit-content;
         overflow: hidden;
@@ -791,11 +1012,15 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     }
     h3, h4{
       font-size: 1em;
+      margin: 10px;
      }
     button{
       min-width:500px;
       overflow: hidden;
       font-size: 0.6em;
+    }
+    .EduDescription{
+      font-size: 0.8em;
     }
  
     .Vector{
@@ -848,6 +1073,7 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     background-position: center;
     overflow: hidden;
   }
+  
   .Discription{
     width: 30%;
     margin: 0%;
@@ -869,8 +1095,8 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
     background-size:center;
     overflow: hidden;
     animation:colorc3 60s infinite;
-
   }
+
   .CvPro .Images2{
     width: 70%;
     height: 100%;
@@ -897,11 +1123,100 @@ margin: 10px; /* Show the cards when .show is added to .cv3 */
   font-size: 1.2em;
   text-align: right;
 }
+.LogoDesign{
+  display:none;
+  justify-content:flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1900px;
+  height: 70vh;
+  max-height: 720px;
+  background-color: rgb(0, 0, 0);
+  background-size:center;
+  overflow: hidden;
+
+}
+.LogoDesign .Images2{
+  width: 70%;
+  height: 100%;
+  background-color: #f1c2af;
+  background-size: contain;
+  clip-path:polygon(0% 0%, 50vw 0%, 100% 100%, 0% 100%) ;
+  overflow: hidden;
+  animation:colorc 18s infinite;
+  animation:LogoAnimation 60s infinite;
+}
+.Images div{
+  width: 100%;
+  height: 720px;
+  position: absolute;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+
+.Discription3{
+  width: 30%;
+    margin: 0%;
+    padding:80px ;
+    font-size: 1.2em;
+}
+
+.PosterDesign{
+  display:none;
+  justify-content:flex-start;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  width: 100%;
+  max-width: 1900px;
+  height: 70vh;
+  max-height: 720px;
+  background-color: rgb(0, 0, 0);
+  background-size:center;
+  overflow: hidden;
+
+}
+.PosterDesign .Images2{
+  width: 70%;
+  height: 100%;
+  background-color: #f1c2af;
+  background-size: contain;
+  clip-path:polygon(16vw 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
+  animation:colorc 18s infinite;
+  animation:PosterAnimation 60s infinite;
+}
+
+.Discription4{
+  width: 30%;
+    margin: 0%;
+    padding:80px ;
+    font-size: 1.2em;
+}
+.box1{
+  animation-delay: 0.3s;
+}
+.box2{
+  animation-delay: 1.2s;
+}
+.box3{
+  animation-delay: 0.6s;
+}
+.box4{
+  animation-delay: 1.5s;
+}
+.box5{
+  animation-delay: 0.9s;
+}
+.box6{
+  animation-delay: 1.8s;
+}
 }
 
 img{
     padding: 0 20px 0 20px;
 }
+
 .table2 {
     display: none;
     border-collapse: collapse;
@@ -914,15 +1229,17 @@ img{
     padding: 5px;
     text-align: left;
 }
+
 .EduDescription{
   display:none;
   width: 100%;
   text-align: justify;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .Abtn{
     width:fit-content ;
-    height: 75px;
+    height: fit-content;
     background-color: #000000;
     color: white;
     padding: 50px;
@@ -932,11 +1249,12 @@ img{
     border-radius: 20px;
     transition: all 0.3s ease;
 }
+
 .Abtn:hover{
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
-
 }
+
 .container:hover button{
   color: #000000;
 }
@@ -945,62 +1263,82 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
+
 .container3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: fit-content;
+  background-color: #ff000028;
 }
 
+.box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover {
+  background-color: #ff0d00;
+  border: none;
+  border-radius: 0px;
+  min-width: 300px;
+  font-size: 1.3em;
+}
+
+@keyframes buttonGLow {
+  0%{
+    border:2px solid black;
+    background-color: rgba(0, 0, 0, 0.753);
+  }
+  25%{
+    border: 2px solid red;
+    background-color: #ff0000de;
+  }
+  50%{
+    border:2px solid black;
+    background-color: rgba(0, 0, 0, 0.753);
+  }
+  75%{
+    border: 2px solid red;
+    background-color: #ff0000de;
+  }
+  100%{
+    border:2px solid black;
+    background-color: rgba(0, 0, 0, 0.753);
+  }
+}
 .box {
   display: flex;
-  max-width: 500px;
-  min-width: 250px;
+  width: 100%;
+  max-width: 47vw;
+  min-width: 450px;
   height: 100px;
-  margin: 10px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0);
   transition:all 0.3s ease;
-  border: 5px solid red;
+  border: 1px solid rgb(255, 255, 255);
   transition-duration: all 0.3s ;
+  margin: 20px auto;
+  border-radius: 50px;
+  animation: buttonGLow 20s infinite;
 }
-
-.box1:hover {
-  background-color: #ff0d00;
-  border: none;
-  border-radius: 0px;
-  width: 600px;
+.box1{
+  animation-delay: 0.3s;
 }
-
-.box2:hover {
-  background-color: #ff0d00;
-  border: none;
-  border-radius: 0px;
-  width: 600px;
+.box2{
+  animation-delay: 2.1s;
 }
-
-.box3:hover {
-  background-color: #ff0d00;
-  border: none;
-  border-radius: 0px;
-  width: 600px;
+.box3{
+  animation-delay: 0.9s;
 }
-.box4:hover {
-  background-color: #ff0d00;
-  border: none;
-  border-radius: 0px;
-  width: 600px;
+.box4{
+  animation-delay: 2.7s;
 }
-.box5:hover {
-  background-color: #ff0d00;
-  border: none;
-  border-radius: 0px;
-  width: 600px;
+.box5{
+  animation-delay: 1.5s;
+}
+.box6{
+  animation-delay: 3.8s;
 }
 .box button{
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1010,5 +1348,13 @@ img{
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: white;
+  color: rgb(255, 255, 255);
+}
+
+.container3 a{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
 }

@@ -117,3 +117,17 @@ function toggleDiv4() {
     container5.style.display = "none";
   }
 }
+function toggleDiv5() {
+  if (container6.style.display === "none") {
+    container6.style.display = "flex";
+  } else {
+    container6.style.display = "none";
+  }
+}
+function toggleDiv6() {
+  if (container7.style.display === "none") {
+    container7.style.display = "flex";
+  } else {
+    container7.style.display = "none";
+  }
+}
